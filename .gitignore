@@ -1,0 +1,9 @@
+
+# Created by https://www.gitignore.io/api/jekyllcn,jekyll
+
+#!! ERROR: jekyllcn is undefined. Use list command to see defined gitignore types !!#
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-metadata
