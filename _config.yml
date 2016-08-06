@@ -43,9 +43,10 @@ about_stub: >
 
 about_footer: true
 
-twitter_username: AnkitSultana
 github_username: liwink
 facebook_id: yourusername
+zhihu_username: 刘一鹤
+zhihu_url_name: liwink
 
 favicon: true
 favicon_location: "images/favicon.ico"
