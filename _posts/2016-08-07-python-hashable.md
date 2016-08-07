@@ -1,5 +1,3 @@
-## Python Hashable
-
 The key of `dict` must be hashable.
 
 > Hashability makes an object usable as a dictionary key and a set member, because these data structures use the hash value internally.
