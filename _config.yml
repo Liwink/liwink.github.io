@@ -78,7 +78,6 @@ markdown: kramdown
 
 gems:
     - jekyll-paginate
-    - redcarpet
 
 sass:
     style: compressed
