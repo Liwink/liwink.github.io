@@ -60,20 +60,10 @@ tracking_id: UA-69243698-7 # GA Tracking ID
 og_image: "images/accent.png" # This will show in facebook thumbnails
 twitter_image: "http://ankitsultana.me/images/accent.png?1234" # This will show in twitter cards
 
-# redcarpet:
-#   extensions: [fenced_code_blocks]
-#   render_options:
-
-# markdown: redcarpet
-# highlighter: pygments
-# redcarpet:
-  # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-
-highlighter: pygments
-markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
-kramdown:
-  input:         GFM
-  auto_ids:      true
+# markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
+# kramdown:
+#   input:         GFM
+#   auto_ids:      true
   # auto_id_prefix:'id-'
 
 ####################################
@@ -84,7 +74,7 @@ kramdown:
 ####################################
 ####################################
 
-# markdown: kramdown
+markdown: kramdown
 
 gems:
     - jekyll-paginate
