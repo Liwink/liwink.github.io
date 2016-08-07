@@ -19,8 +19,10 @@ layout: default
     {% include about.html %}
 {% endif %}
 
-<!-- {% if site.facebook_comments %}
+{% comment %}
+{% if site.facebook_comments %}
     {% include fb_comments.html %}
 {% endif %}
 
-{% include disqus.html %} -->
+{% include disqus.html %}
+{% endcomment %}
