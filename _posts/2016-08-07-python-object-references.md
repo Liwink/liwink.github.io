@@ -1,7 +1,7 @@
 **points**:
 
-- variables only refer to object
-- == and is
+- variables only *refer to* object
+- `==` and `is`
 - copy and deepcopy
 - function parameters are passed as aliases
 - del and reference counting
@@ -10,7 +10,7 @@
 
 Variables are not *boxes*, it's better to think of them as *labels* attached to objects.
 
-```python
+{% highlight python %}
 >>> class Gizmo:
 ...     def __init__(self):
 ...         print("Grimo id: {}".format(id(self)))
@@ -21,7 +21,7 @@ Variables are not *boxes*, it's better to think of them as *labels* attached to 
 
 >>> dir()
 # ['Gizmo', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
-```
+{% endhighlight %}
 
 Variables are assigned to objects only after the objects are created.
 
@@ -29,7 +29,7 @@ Variables are assigned to objects only after the objects are created.
 
 charles and lewis refer to the same object
 
-```python
+{% highlight python %}
 >>> charles = {'name': 'Charles L. Dodgson', 'born': 1832}
 >>> lewis = charles
 >>> charles == lewis
@@ -41,17 +41,17 @@ True
 >>> lewis["balance"] = 950
 >>> charles
 {'name': 'Charles L. Dodgson', 'balance': 950, 'born': 1832}
-```
+{% endhighlight %}
 
 alex and charles compare equal, byt alex is not charles
 
-```python
+{% highlight python %}
 >>> alex = {'name': 'Charles L. Dodgson', 'born': 1832, 'balance': 950}
 >>> alex == charles # 1
 True
 >>> alex is not charles
 True
-```
+{% endhighlight %}
 
 1. alex and charles compare equal, because of the `__eq__` implementation in the dict class
 
@@ -63,7 +63,7 @@ True
 
 The paremeters inside the function become aliases of the actual arguments. The result of this scheme is that a function may change any mutable object passed as a parameter.
 
-```python
+{% highlight python %}
 >>> def f(a, b):
 ...     a+=b
 ...     return a
@@ -72,20 +72,20 @@ The paremeters inside the function become aliases of the actual arguments. The r
 >>> f(a, b)
 >>> (a, b)
 ([1, 2, 3, 4], [3, 4])
-```
+{% endhighlight %}
 
 #### Mutable Types as Parameter Defaults: Bad Idea
 
 defensive programming with mutable parameters
 
-```python
+{% highlight python %}
 class Defensive:
     def __init__(self, para=None):
         if para is None:
             self.para = []
         else:
             self.para = list(para) # 1
-```
+{% endhighlight %}
 
 1. `list(para)` produces a *shallow copy* or convert it to a list
 

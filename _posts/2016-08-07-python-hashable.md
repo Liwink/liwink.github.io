@@ -19,14 +19,14 @@ In Python:
 
 
 
-```python
+{% highlight python %}
 >>> tt = (1, 2, (30, 40))
 >>> hash(tt)
 8027212646858338501
 >>> tl = (1, 2, [30, 40])
 >>> hash(tl)
 TypeError: unhashable type: 'list'
-```
+{% endhighlight %}
 
 
 
