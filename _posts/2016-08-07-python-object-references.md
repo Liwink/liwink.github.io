@@ -76,6 +76,8 @@ The paremeters inside the function become aliases of the actual arguments. The r
 
 #### Mutable Types as Parameter Defaults: Bad Idea
 
+> The default values are only evaluated at the point of function definition in the *defining* scope.
+
 defensive programming with mutable parameters
 
 {% highlight python %}
