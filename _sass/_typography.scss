@@ -44,7 +44,7 @@
         font-size: 20px;
     }
     p {
-        font-size: 19px;
+        font-size: 17px;
         margin: $base-spacing/3 0;
         font-weight: lighter;
     }
@@ -59,7 +59,7 @@
         border-bottom: 2px solid $accent-color;
     }
     .disabled {
-        font-size: 17px;
+        font-size: 15px;
         color: #fff;
         background: $accent-color;
         border: none;
@@ -73,8 +73,8 @@
     }
     .capsule {
         padding: $base-spacing/4 $base-spacing/2;
-        font-size: 17px;
-        border-radius: 15px;
+        font-size: 14px;
+        border-radius: 13px;
         background: $accent-color;
         color: #fff;
     }
@@ -119,12 +119,12 @@
         list-style-type: decimal;
     }
     li {
-      font-size: 19px;
+      font-size: 17px;
       font-weight: lighter;
       margin: 0.8em 0em 0.8em 0.5em;
     }
     li p {
-        font-size: 19px;
+        font-size: 17px;
     }
 
 }
