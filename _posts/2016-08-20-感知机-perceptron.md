@@ -111,7 +111,7 @@ $$
 
 #### Python 实现
 
-{ highlight python }
+{% highlight python %}
 import numpy as np
 
 class Perceptron:
@@ -142,7 +142,7 @@ class Perceptron:
     
     def _predict(self, X):
         return np.where(self._net_input(X) >= 0.0, 1, -1)
-{ endhighlight }
+{% endhighlight %}
 
 
 
