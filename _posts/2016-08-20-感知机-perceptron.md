@@ -78,7 +78,7 @@
 
       ​
       $$
-      w_i(t+1) = w_i(t) + (d_j - y_j(t))x_{j,i} \quad \text{for all features } 0 \leq i \leq n.
+      w_i(t+1) = w_i(t) + \eta (d_j - y_j(t))x_{j,i} \quad \text{for all features } 0 \leq i \leq n.
       $$
       ​
 
@@ -117,6 +117,8 @@ $$
 $$
 
 不考虑范数`||w||`，则可定义损失函数为：
+
+
 $$
 L(w, b) = - \sum_{x_i \in M} \ y_i(\mathbf{w} \cdot \mathbf{x_0} + \mathbf{b})
 $$
