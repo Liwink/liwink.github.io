@@ -1,4 +1,5 @@
-[TOC]
+* TOC
+{:toc}
 
 #### 背景
 
@@ -32,20 +33,29 @@
 ##### 参数定义
 
 - 输入向量 **z** 经过感知机的输出：
+  ​
   $$
   y = f(\mathbf{z})
   $$
+  ​
 
 - 训练数据集:
+  ​
   $$
   D = \{(\mathbf{x_1}, \mathbf{d_1}), \dots, (\mathbf{x_n}, \mathbf{d_n})\} \\
-  x_{n,i} \text{ 第 } n \text{个输入向量的第 } i \text{ 个元素}
+  x_{n,i} \text{ 为第 } n \text{个输入向量的第 } i \text{ 个元素}
   $$
+  ​
 
 - 时相关（time-dependence）的权值 w:
+  ​
   $$
   w_i(t) \text{ 是第 } t \text{ 次训练后 } i \text{ 的权值 }
   $$
+
+
+
+
 
 
 
@@ -58,16 +68,22 @@
 2. 对训练数据集中每个点 `j` 进行下面的迭代：
 
    1. 计算当前（t 时）感知机下计算的输出值：
+      ​
       $$
       y_j(t) = f[\mathbf{w}(t) \cdot \mathbf{x_j}]
       $$
+      ​
 
    2. 更新权值：
+
+      ​
       $$
       w_i(t+1) = w_i(t) + (d_j - y_j(t))x_{j,i} \quad \text{for all features } 0 \leq i \leq n.
       $$
+      ​
 
    3. 重复上步，直到迭代误差小于用户定义的误差阈值：
+      ​
       $$
       \frac{1}{s}\sum_{j=1}^{s} |d_j - y_j(t)| < \gamma
       $$
@@ -76,9 +92,13 @@
 
 
 
+
+
+
+
 ##### 收敛性
 
-感知器是线性分类器，所以如果训练集 **`D` ** 不是线性可分（[linearly separable](https://en.wikipedia.org/wiki/Linear_separability)）就不会得到理想结果。
+感知器是线性分类器，所以如果训练集 **`D`** 不是线性可分（[linearly separable](https://en.wikipedia.org/wiki/Linear_separability)）就不会得到理想结果。
 
 如果训练集是线性可分的，感知器即可收敛，并且可以得出权值训练次数的上限。
 
@@ -89,20 +109,30 @@
 - **损失函数** 的最小化对应「统计学习方法」中的学习策略
 - **梯度下降法** 对应着学习的算法
 
-损失函数用输入空间中点 x_0 到超平面 S 的距离表示：
+损失函数用输入空间中点 $$ x_0 $$ 到超平面 S 的距离表示：
+
+
 $$
 \frac{1}{||w||}|\mathbf{w} \cdot \mathbf{x_0} + \mathbf{b}|
 $$
-不考虑范数 ||w||，则可定义损失函数为：
+
+不考虑范数`||w||`，则可定义损失函数为：
 $$
 L(w, b) = - \sum_{x_i \in M} \ y_i(\mathbf{w} \cdot \mathbf{x_0} + \mathbf{b})
 $$
+
+
 采用 **随机梯度下降法**，极小化误差函数，对 w b 求导后对应梯度如下：
+
+
 $$
 \triangledown_wL(w, b) = - \sum_{x_i \in M}y_ix_i \\
 \triangledown_bL(w, b) = - \sum_{x_i \in M}y_i \\
 $$
+
 在迭代中对 w, b 进行更新：
+
+
 $$
 w \gets w + \eta y_i x_i \\
 b \gets b + \eta y_i \\ 
