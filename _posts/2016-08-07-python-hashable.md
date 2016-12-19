@@ -49,5 +49,23 @@ In contrast, user defined class instances are mutable as well, but each two of t
 True
 {% endhighlight %}
 
+#### Dict
 
+Python use a hash table to implement a `dict`.
+
+A hash table is a sparse array. In standard data structure texts, the cells in a hash table are often called "buckets."
+In a `dict` hash table, the bucket for each item containing two fields: a reference to the key and a reference to the value of the item.
+
+The **fetch the value** at `my_dict[search_key]`. Python calls `hash(serach_key)` to obtain the hash value of `search_key` and uses the least significant bits of that number as an offset to look up a bucket in the hash table.
+
+If the bucket is empty, `KeyError` is raised.
+
+Otherwise, the found buckets has an item -- a `found_key:found_value` pair -- and then Python check whether `search_key == found_key`.
+If they match, that was the item sought: `found_value` is returned.
+
+However, if `serach_key` and `found_key` do not match, this is a `hash collision`.
+
+![dict_hash_search](images/dict_hash_search.png)
+
+And here is a [sample code](https://gist.github.com/Liwink/1bd695e86dfba980fec69fa397c1cb38) to show how a `dict` uses `__hash__` and `__eq__` methods of the items.
 
